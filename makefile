@@ -12,7 +12,7 @@ MODEL_NAME=battery_consumption
 MODEL_PACK_NAME=pack_energysim_model_battery_consumption
 MODEL_CONTAINER_NAME=cont_energysim_model_battery_consumption
 MODEL_BACKDOOR=3000
-MODEL_PORTS=8001:8000
+MODEL_PORTS=8005:8000
 
 RABBIT_CONTAINER_NAME=cont_energysim_rabbitmq
 RABBIT_USER=guest
