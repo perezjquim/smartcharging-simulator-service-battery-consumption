@@ -31,8 +31,8 @@ class ModelService:
 
         tf_random = tf.random.uniform(
                 shape=shape,
-                minval=min_final_battery_level,
-                maxval=max_final_battery_level,
+                minval=min_battery_consumption,
+                maxval=max_battery_consumption,
                 dtype=tf.dtypes.float32,
                 seed=None,
                 name=None
