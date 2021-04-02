@@ -17,7 +17,7 @@ RABBIT_PASSWORD=guest
 RABBIT_PORT=5672
 RABBIT_MANAGEMENT_PORT=15672
 
-TENSORFLOW_VERSION=1.5
+TENSORFLOW_VERSION=1.5.0
 # < CONSTANTS
 
 main: check-dependencies stop-docker-model run-docker-model
