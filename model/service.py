@@ -19,7 +19,13 @@ class ModelService:
     @rpc
     def get_final_battery_level( self, initial_battery_level, travel_distance ):
         travel_battery_consumption = self.generate_battery_consumption( )
-        final_battery_level = int( initial_battery_level ) - ( float( travel_distance ) * travel_battery_consumption )
+        final_battery_level = float( initial_battery_level ) - ( float( travel_distance ) * travel_battery_consumption )
+
+        # certificar que o battery level não cai fora dos valores possíveis
+        if final_battery_level > 10:
+            final_battery_level = 10
+        elif final_battery_level < 0:
+            final_battery_level = 0
 
         response = json.dumps( { 'final_battery_level': final_battery_level } )
         return response
